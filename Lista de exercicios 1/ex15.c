@@ -8,7 +8,8 @@ void main(){
     scanf("%f", &segundos);
     
     horas = segundos/3600;
-    minutos = segundos/60;
+    minutos = (horas - (horas*3600))/60;
+    segundos = (horas - (horas*3600)) - (minutos*60);
 
     printf("Horas %f", horas);
     printf("Minutos %f", minutos);
